@@ -17,10 +17,10 @@
 # Return the resulting string.
 def verbing(s):
     if len(s) >= 3:
-        if s[-3:] != "ing":
-            s = s + "ing"
-        else:
+        if s[-3:] == "ing":
             s = s + "ly"
+        else:
+            s = s + "ing"
     return s
 
 
