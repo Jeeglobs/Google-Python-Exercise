@@ -33,24 +33,23 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    n = s.find("not")
-    b = s.find("bad")
+    n = s.find('not')
+    b = s.find('bad')
     if b > n:
-        s = s[:n] + "good" + s[b+3:]
+        s = s[:n] + 'good' + s[b+3:]
     return s
-    # CODE PASSED WITHOUT IF CONDITIONS FROM SOLUTION
 
 
-# F. front_back
-# Consider dividing a string into two halves.
-# If the length is even, the front and back halves are the same length.
-# If the length is odd, we'll say that the extra char goes in the front half.
-# e.g. 'abcde', the front half is 'abc', the back half 'de'.
-# Given 2 strings, a and b, return a string of the form
-#  a-front + b-front + a-back + b-back
+    # F. front_back
+    # Consider dividing a string into two halves.
+    # If the length is even, the front and back halves are the same length.
+    # If the length is odd, we'll say that the extra char goes in the front half.
+    # e.g. 'abcde', the front half is 'abc', the back half 'de'.
+    # Given 2 strings, a and b, return a string of the form
+    #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    a_middle = len(a) / 2
-    b_middle = len(b) / 2
+    a_middle = len(a) // 2
+    b_middle = len(b) // 2
     if len(a) % 2 == 1:
         a_middle = a_middle + 1
     if len(b) % 2 == 1:

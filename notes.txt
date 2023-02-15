@@ -1,0 +1,6 @@
+// front_x from list1.py //
+I solved without using lambda like we did after class with Emmaline. I like this new solution because it seems cleaner to me. I do not      understand lambda.
+
+// sort_last from list1.py //
+I solved using basically the exact code with lambda from the example with Emmaline. I want to know other ways though.
+I realized that when using lambda, it doesn't matter what 'x' is called. Seems redundant to even have to type 'x' at all.

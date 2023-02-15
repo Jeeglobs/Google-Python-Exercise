@@ -25,9 +25,9 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
     if count >= 10:
-        return "Number of donuts: many"
+        return 'Number of donuts: many'
     else:
-        return f"Number of donuts: {count}"
+        return 'Number of donuts: ' + str(count)
 
 
 # B. both_ends
@@ -36,28 +36,29 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-    if len(s) < 2:
-        return ""
+    a = s[:2]
+    b = s[-2:]
+    if len(s) >= 2:
+        return a + b
     else:
-        front2 = s[0:2]
-        back2 = s[-2:]
-        return front2 + back2
+        return ''
+
+    # C. fix_start
+    # Given a string s, return a string
+    # where all occurences of its first char have
+    # been changed to '*', except do not change
+    # the first char itself.
+    # e.g. 'babble' yields 'ba**le'
+    # Assume that the string is length 1 or more.
+    # Hint: s.replace(stra, strb) returns a version of string s
+    # where all instances of stra have been replaced by strb.
 
 
-# C. fix_start
-# Given a string s, return a string
-# where all occurences of its first char have
-# been changed to '*', except do not change
-# the first char itself.
-# e.g. 'babble' yields 'ba**le'
-# Assume that the string is length 1 or more.
-# Hint: s.replace(stra, strb) returns a version of string s
-# where all instances of stra have been replaced by strb.
 def fix_start(s):
-    front = s[0]
-    back = s[1:]
-    fixed_back = back.replace(front, "*")
-    return front + fixed_back
+    a = s[0]
+    b = s[1:]
+    changed_b = b.replace(a, '*')
+    return a + changed_b
 
 
 # D. MixUp
@@ -70,11 +71,12 @@ def fix_start(s):
 def mix_up(a, b):
     a_mixed = b[:2] + a[2:]
     b_mixed = a[:2] + b[2:]
-    return a_mixed + " " + b_mixed
+    return a_mixed + ' ' + b_mixed
+
+    # Provided simple test() function used in main() to print
+    # what each function returns vs. what it's supposed to return.
 
 
-# Provided simple test() function used in main() to print
-# what each function returns vs. what it's supposed to return.
 def test(got, expected):
     if got == expected:
         prefix = ' OK '
