@@ -27,6 +27,20 @@ words = ['apple', 'board', 'chess', 'dog', 'zipline']
 # print(words[::-3])
 # --> ['zipline', 'board'] --- reverses the order and then prints index 0 and index 3?
 
+# print(words[::4])
+# --> ['apple', 'zipline'] --- prints index 0 and index 4
+
+# print(words[::-4])
+# --> ['zipline', 'apple'] --- reverses the order and then prints index 0 and index 4
+
+# ===============================
+
+# print(words[::5])
+# --> ['apple'] --- no index 5, so does it wrap around so 0 is 5???
+
+# print(words[::-5])
+# --> ['zipline'] --- reverse wrap???
+
 # ===============================
 
 # print(words[0::4])
@@ -35,4 +49,4 @@ words = ['apple', 'board', 'chess', 'dog', 'zipline']
 # print(words[2::4])
 # --> ['chess'] --- WTF why does't it print ['chess', 'zipline']
 
-print(words[::-3])
+# print(words[::5])
