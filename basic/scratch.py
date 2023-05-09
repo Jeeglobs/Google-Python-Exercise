@@ -48,5 +48,3 @@ words = ['apple', 'board', 'chess', 'dog', 'zipline']
 
 # print(words[2::4])
 # --> ['chess'] --- WTF why does't it print ['chess', 'zipline']
-
-# print(words[::5])

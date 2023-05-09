@@ -35,19 +35,21 @@ def match_ends(words):
 # ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
+
+# def front_x(words):
+#     words.sort()
+#     return sorted(words, key=lambda w: w[0] == 'x', reverse=True)
+
+
 def front_x(words):
     x_words = []
     other_words = []
     for word in words:
         if word[0] == 'x':
             x_words.append(word)
-            # sorted_x_words = sorted(x_words, key=lambda word: word[1])
         else:
             other_words.append(word)
-    x_words.sort()
-    other_words.sort()
-    return x_words + other_words
-    # return sorted_x_words + other_words
+    return sorted(x_words) + sorted(other_words)
 
 
 # C. sort_last
